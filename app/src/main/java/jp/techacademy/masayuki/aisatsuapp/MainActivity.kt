@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
 
                     val time = "$hour:$minute"
 
-                    if(time >= "2:00" && time <= "9:59" ){
+                    if(time.compareTo("2:0") >= 0 && time.compareTo("9:59") <= 0 ){
                         textView.text = "おはよう"
-                    }else if(time >= "10:00" && time <= "17:59" ){
+                    }else if(time.compareTo("10:0") >= 0 && time.compareTo("17:59") <= 0 ){
                         textView.text = "こんにちは"
-                    }else if(time >= "18:00" && time <= "1:59" ){
+                    }else if(time.compareTo("18:0") >= 0 || time.compareTo("1:59") <= 0 ){
                         textView.text = "こんばんは"
                     }
 
